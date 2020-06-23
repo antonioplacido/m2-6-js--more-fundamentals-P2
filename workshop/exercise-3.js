@@ -13,3 +13,17 @@ let mostPopularFood = [
   'parmesan chicken',
   'buffalo-flavored cauliflower',
 ];
+
+const sortAlphabetically= (list) => {
+  const sortedList = [...list].sort();
+  for (let i=0; i<list.length; i++){
+    console.log(`${sortedList[i]} (${list.indexOf(sortedList[i])+1})`);
+  }
+};
+
+sortAlphabetically(mostPopularFood);
+
+  // let arr1=['dog',"cat"]
+  // let arr2=['crow',"eagle"]
+  // let arr3 = [...arr1,...arr2, 'whale'].sort();
+  // console.log(arr3);
