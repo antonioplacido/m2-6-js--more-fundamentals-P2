@@ -3,8 +3,8 @@
 
 const staffMembers = [
   {
-    name: 'Jane Smith',
-    title: 'Web Developer II',
+    name: "Jane Smith",
+    title: "Web Developer II",
     skillLevels: {
       javascript: 7,
       python: 4,
@@ -12,8 +12,8 @@ const staffMembers = [
     },
   },
   {
-    name: 'Frank Castle',
-    title: 'Web Developer I',
+    name: "Frank Castle",
+    title: "Web Developer I",
     skillLevels: {
       javascript: 4,
       python: 4,
@@ -21,8 +21,8 @@ const staffMembers = [
     },
   },
   {
-    name: 'Steve Rogers',
-    title: 'Database Admin',
+    name: "Steve Rogers",
+    title: "Database Admin",
     skillLevels: {
       javascript: 7,
       python: 4,
@@ -30,8 +30,8 @@ const staffMembers = [
     },
   },
   {
-    name: 'Chuck Taylor',
-    title: 'Web Developer III',
+    name: "Chuck Taylor",
+    title: "Web Developer III",
     skillLevels: {
       javascript: 8,
       python: 7,
@@ -39,8 +39,8 @@ const staffMembers = [
     },
   },
   {
-    name: 'Thor Odinson',
-    title: 'Web Intern',
+    name: "Thor Odinson",
+    title: "Web Intern",
     skillLevels: {
       javascript: 4,
       python: 3,
@@ -49,6 +49,37 @@ const staffMembers = [
   },
 ];
 
-const getData = (arr, key) => {
-  // return something
+// Write a function that will return a new
+// array of employee values, given a key.
+//  _very similar to Ex. 5_ but with a twist.
+//  This time you are provided with an array of objects.
+
+console.log(staffMembers[0]);
+
+const getData = (staffArray, key) => {
+  return staffArray.map((staffMember) => {
+    return staffMember[key];
+  });
 };
+
+//sniping excel skillsets//
+
+// const getData = (staffArray, key) => {
+//   return staffArray.map((staffMember) => {
+//     return staffMember[key];
+//   });
+// };
+
+// const getData = (arr, key) => {
+//   let arr2 = [];
+//   arr.forEach(name2 => {
+//       arr2.push(name2[key])
+//   })
+//   return arr2;
+// }
+
+//test//
+
+console.log(getData(getData(staffMembers, `skillLevels`), "python"));
+console.log(getData(staffMembers, `name`));
+console.log(getData(staffMembers, `title`));
