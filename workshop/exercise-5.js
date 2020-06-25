@@ -8,8 +8,19 @@ const foodPairings = {
   strawberries: 'cream',
 };
 
-const getValue = () => {
-  // do something
+
+//## Exercise 5
+
+// Write a function that accepts two parameters, 
+
+
+
+// Write a function that accepts two parameters, 
+// an object and a key (string). 
+const getValue = (Objct,key) => {
+ // The function returns the value of the key in the object.// 
+  if(Object.keys(Objct).includes(key)){return Objct[key];}else {return `not available`;}
+  
 };
 
 expect(getValue(foodPairings, 'burgers'), 'beer');
